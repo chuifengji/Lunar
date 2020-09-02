@@ -1,48 +1,92 @@
 import Router from "next/router";
+import React, { useState, useEffect } from "react";
+
 export default function ArticleHeader() {
+  const [headerScrollDown, setHeaderScrollDown] = useState(false);
+  function windowAddMouseWheel() {
+    var scrollFunc = function (e) {
+      e = e || window.event;
+      if (e.wheelDelta) {
+        if (e.wheelDelta > 0) {
+          setHeaderScrollDown(false)
+        }
+        if (e.wheelDelta < 0) {
+          setHeaderScrollDown(true)
+        }
+      } else if (e.detail) {
+        if (e.detail > 0) {
+          setHeaderScrollDown(false)
+        }
+        if (e.detail < 0) {
+          setHeaderScrollDown(true)
+        }
+      }
+    };
+    if (document.addEventListener) {
+      document.addEventListener('DOMMouseScroll', scrollFunc, false);
+    }
+    window.onmousewheel = document.onmousewheel = scrollFunc;
+  }
+  useEffect(() => {
+    windowAddMouseWheel();
+  }, []);
   return (
     <div>
-      <div className="header_container">
+      <div className={`header_container ${headerScrollDown ? 'header_container_scrolldown' : 'header_container_scrollup'}`}>
         <div className="title_blog" onClick={() => Router.push("/")}>
           EthanLv's Blog
         </div>
         <div className="header_item" onClick={() => Router.push("/")}>
-          技术
+          program
         </div>
         <div className="header_item" onClick={() => Router.push("/thoughts")}>
-          随想
+          thought
         </div>
         <div className="header_item" onClick={() => Router.push("/about")}>
-          关于我
+          about
         </div>
       </div>
       <style jsx>{`
         .header_container {
           width: 100vw;
-          height: 50px;
+          height: 60px;
           position: fixed;
           top: 0;
-          font-family: "Noto Serif SC", Lusitana, serif;
-          line-height: 50px;
-          background-color: #4c4c4c;
+          font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+          line-height: 60px;
+          background-color: rgba(255,255,255,0.75);
           display: flex;
           flex-direction: row;
           text-align: center;
-          color: #fff;
+          color: #553c9a;
+          font-size:16px;
+          backdrop-filter: blur(5px);
+          border-bottom: 1px solid #e2e8f0;
+          transition: transform 250ms ease;
         }
+        .header_container_scrolldown{
+          transform: translate3d(0, -100%, 0);
+        }
+        .header_container_scrollup{
+          transform: none;
+      }
         .title_blog {
           width: 120px;
-          height: 50px;
+          height: 60px;
           cursor: pointer;
+          font-weight: 700;
+        }
+        .title_blog:hover {
+          color: #9f7aea;
         }
         .header_item {
           width: 80px;
-          height: 50px;
-          line-height: 50px;
+          height: 60px;
+          line-height: 60px;
           cursor: pointer;
         }
         .header_item:hover {
-          background-color: #919191;
+          color: #9f7aea;
         }
       `}</style>
     </div>

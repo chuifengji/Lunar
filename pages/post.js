@@ -186,8 +186,13 @@ export default function Post() {
           flex: 1;
           height: 100%;
         }
+{/* 
+        code{
+          color: #553c9a;
+          background-color: #edf2f7;
+        } */}
         pre {
-          background: #282a36;
+          background: #f5fde8;
           color: #f8f8f2;
           padding: 0.6em;
           margin: 0.5em 0;

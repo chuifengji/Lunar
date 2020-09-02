@@ -82,7 +82,7 @@ export default class article extends React.Component {
               padding-right: 1rem;
               box-sizing: content-box;
               color: #424242;
-              font-family: "Noto Serif SC", Lusitana, serif;
+              font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
               overflow-x: hidden;
               margin-left: auto;
               font-size: 16px;
@@ -96,7 +96,7 @@ export default class article extends React.Component {
               padding-right: 2rem;
               box-sizing: content-box;
               color: #424242;
-              font-family: "Noto Serif SC", Lusitana, serif;
+              font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
               overflow-x: hidden;
               margin-left: auto;
               font-size: 16px;
@@ -110,7 +110,7 @@ export default class article extends React.Component {
               padding-right: 2rem;
               color: #424242;
               box-sizing: content-box;
-              font-family: "Noto Serif SC", Lusitana, serif;
+              font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
               overflow-x: hidden;
               margin-left: auto;
               font-size: 16px;
@@ -123,7 +123,7 @@ export default class article extends React.Component {
               padding-left: 8rem;
               padding-right: 8rem;
               color: #424242;
-              font-family: "Noto Serif SC", Lusitana, serif;
+              font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
               overflow-x: hidden;
               margin-left: auto;
               font-size: 16px;
@@ -138,7 +138,7 @@ export default class article extends React.Component {
               margin-top: 30px;
               padding-right: 20rem;
               color: #424242;
-              font-family: "Noto Serif SC", Lusitana, serif;
+              font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
               overflow-x: hidden;
               font-size: 16px;
               box-sizing: content-box;
