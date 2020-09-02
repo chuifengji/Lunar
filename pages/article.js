@@ -120,8 +120,8 @@ export default class article extends React.Component {
           @media (min-width: 1024px) {
             .article_source {
               max-width: 1024px;
-              padding-left: 8rem;
-              padding-right: 8rem;
+              padding-left: 9rem;
+              padding-right: 9rem;
               color: #424242;
               font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
               overflow-x: hidden;
@@ -134,9 +134,9 @@ export default class article extends React.Component {
           @media (min-width: 1280px) {
             .article_source {
               max-width: 1280px;
-              padding-left: 20rem;
+              padding-left: 23rem;
               margin-top: 30px;
-              padding-right: 20rem;
+              padding-right: 23rem;
               color: #424242;
               font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
               overflow-x: hidden;
@@ -177,6 +177,8 @@ export default class article extends React.Component {
               padding-left: 1rem;
               padding-right: 1rem;
               font-weight: 400;
+              line-height:1.6;
+              letter-spacing:2px;
               color: #23394d;
               font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
                 Arial, "PingFang SC", "Hiragino Sans GB", STHeiti,
@@ -222,11 +224,17 @@ export default class article extends React.Component {
               color: #23394d;
             }
             h1 {
-              margin: 60px 2px 0 0;
+              margin: 60px 10px 0 0;
+            }
+            h2{
+              margin: 30px 5px 0 0;
+            }
+            h3{
+              margin: 15px 3px 0 0;
             }
             a {
               border-bottom-width: 2px;
-              border-color: #9e9e9e;
+              border-color: #ebfa9f;
               border-bottom-style: solid;
               color: inherit;
               text-decoration: none;
@@ -234,16 +242,17 @@ export default class article extends React.Component {
             blockquote {
               border-left-width: 4px;
               border-left-style: solid;
-              border-left-color: #eee;
-              color: #9e9e9e;
+              border-left-color: #553c9a;
+              color: #553c9a;
               margin: 0;
-              padding: 1rem;
-              background-color: #eeeeee;
-              border-color: #9e9e9e;
-              font-style: italic;
+              padding: .3rem;
+              background-color: #edf2f7;
+              border-radius:8px;
             }
-            @media screen and (max-width: 640px) {
-            }
+           strong{
+            color: #553c9a;
+            background-color: #edf2f7;
+           }
           `}
         </style>
         <Footer></Footer>

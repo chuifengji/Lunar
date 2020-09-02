@@ -30,6 +30,7 @@ export default function ArticleHeader() {
   useEffect(() => {
     windowAddMouseWheel();
   }, []);
+
   return (
     <div>
       <div className={`header_container ${headerScrollDown ? 'header_container_scrolldown' : 'header_container_scrollup'}`}>
