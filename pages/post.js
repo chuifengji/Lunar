@@ -3,6 +3,11 @@ import React, { useState } from "react";
 import marked from "marked";
 import hljs from "highlight.js";
 import axios from "axios";
+import ArticleList from "../components/ArticleList";
+import { DatePicker, Space, Input, Select, Button, Layout } from 'antd';
+const { TextArea } = Input;
+const { Option } = Select;
+const { Header, Footer, Sider, Content } = Layout;
 hljs.configure({
   tabReplace: "  ",
   classPrefix: "hljs-",
@@ -58,36 +63,36 @@ export default function Post() {
   let editArticle = function () {
     let valueMarkdown = contentValue;
     let valueHtml = marked(contentValue);
-    axios({
-      method: "post",
-      url: "http://localhost:3001/editArticle",
-      data: {
-        id,
-        timeValue,
-        typeValue,
-        titleValue,
-        secretValue,
-        valueMarkdown,
-        valueHtml,
-      },
-    });
+    // axios({
+    //   method: "post",
+    //   url: "http://localhost:3001/editArticle",
+    //   data: {
+    //     id,
+    //     timeValue,
+    //     typeValue,
+    //     titleValue,
+    //     secretValue,
+    //     valueMarkdown,
+    //     valueHtml,
+    //   },
+    // });
   };
-  let contentChange = function (e) {
+  let contentChange = (e) => {
     setContent(e.target.value);
   };
-  let timeChange = function (e) {
-    setTime(e.target.value);
+  let timeChange = (date, dateString) => {
+    setTime(dateString);
+  }
+  let typeChange = (value) => {
+    setType(value);
   };
-  let typeChange = function (e) {
-    setType(e.target.value);
-  };
-  let titleChange = function (e) {
+  let titleChange = (e) => {
     setTitle(e.target.value);
   };
-  let secretChange = function (e) {
+  let secretChange = (e) => {
     setSecret(e.target.value);
   };
-  let idChange = function (e) {
+  let idChange = (e) => {
     setId(e.target.value);
   };
   return (
@@ -104,15 +109,33 @@ export default function Post() {
         <meta name="renderer" content="webkit" />
       </Head>
       <main>
-        <div className="container">
-
-
-          <div className="previewContainer">
-            <h1>{titleValue}</h1>
-            <time>{timeValue}</time>
-            <div dangerouslySetInnerHTML={{ __html: marked(contentValue) }} />
-          </div>
-        </div>
+        <Layout>
+          <Header style={{ position: 'fixed', zIndex: 1, width: '100%', background: '#fff' }}>
+            <Space direction="horizontal">
+              <Input placeholder="输入标题" onChange={titleChange} />
+              <DatePicker onChange={timeChange} />
+              <Select defaultValue="文章类型" style={{ width: 120 }} onChange={typeChange}>
+                <Option value="技术">技术</Option>
+                <Option value="随想">随想</Option>
+              </Select>
+              <Input.Password placeholder="输入密钥" onChange={secretChange} />
+              <Button type="primary" onClick={postArticle}>发布</Button>
+              <Button type="primary" onClick={editArticle}> 修改</Button>
+            </Space>
+          </Header>
+          <Content style={{ padding: '0 0px', marginTop: 64 }}>
+            <div className="container">
+              <div className="editContainer">
+                <TextArea className="textAreaBox" placeholder="输入文章内容" autoSize={{ minRows: 30 }} allowClear onChange={contentChange} />
+              </div>
+              <div className="previewContainer">
+                <h1>{titleValue}</h1>
+                <time>{timeValue}</time>
+                <div dangerouslySetInnerHTML={{ __html: marked(contentValue) }} />
+              </div>
+            </div>
+          </Content>
+        </Layout>
       </main>
       <style jsx global>{`
         .container {
@@ -123,14 +146,13 @@ export default function Post() {
           flex-direction: row;
         }
         .editContainer {
-          width: 600px;
+          width: 46%;
           height: 100%;
           position: relative;
-          padding: 30px;
+          padding: 10px;
         }
         .textAreaBox {
-          width: 500px;
-          height: 400px;
+          min-height: 600px;
         }
         .button_util {
           width: 80px;
@@ -232,7 +254,7 @@ export default function Post() {
           font-style: italic;
         }
       `}</style>
-    </div>
+    </div >
   );
 }
 

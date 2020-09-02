@@ -4,10 +4,8 @@ import ArticleHeader from "../components/ArticleHeader";
 import Footer from "../components/Footer";
 import Gitalk from "gitalk";
 import PostDir from "blog-directories";
-//let PostDir = require("blog-directories");
-console.log(PostDir);
-import React from "react";
 
+import React from "react";
 export default class article extends React.Component {
   static async getInitialProps(context) {
     const { id } = context.query;
@@ -15,13 +13,6 @@ export default class article extends React.Component {
     return { result: result.data };
   }
   componentDidMount() {
-    console.log(typeof PostDir);
-    const postDir = new PostDir({
-      postContainer: "article_content",
-      hierarchy: ["h2", "h3"],
-      // directoriesRoot: "ll",
-    });
-    postDir.render();
     const gitalk = new Gitalk({
       clientID: "4c22039da79b3430e64b",
       clientSecret: "9a23a8225dc9f283717e7e8d25d71470161880d7",
