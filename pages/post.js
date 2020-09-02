@@ -1,9 +1,8 @@
 import Head from "next/head";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import marked from "marked";
 import hljs from "highlight.js";
 import axios from "axios";
-import ArticleList from "../components/ArticleList";
 import { DatePicker, Space, Input, Select, Button, Layout } from 'antd';
 const { TextArea } = Input;
 const { Option } = Select;
@@ -40,9 +39,19 @@ export default function Post() {
   const [typeValue, setType] = useState("");
   const [secretValue, setSecret] = useState("");
   const [id, setId] = useState("");
+  const [articleList, setArticleList] = useState([])
+  useEffect(() => {
+    getList();
+  }, []);
   let postArticle = function () {
     let valueMarkdown = contentValue;
     let valueHtml = marked(contentValue);
+    console.log(timeValue,
+      typeValue,
+      titleValue,
+      secretValue,
+      valueMarkdown,
+      valueHtml)
     axios({
       method: "post",
       url: "https://www.ethanlv.cn/api/addArticle",
@@ -58,24 +67,32 @@ export default function Post() {
   };
   const getList = async () => {
     const result = await axios("https://www.ethanlv.cn/api/getListAll");
-    console.log(result)
+    setArticleList(result.data.ArticleList)
   };
   let editArticle = function () {
     let valueMarkdown = contentValue;
     let valueHtml = marked(contentValue);
-    // axios({
-    //   method: "post",
-    //   url: "http://localhost:3001/editArticle",
-    //   data: {
-    //     id,
-    //     timeValue,
-    //     typeValue,
-    //     titleValue,
-    //     secretValue,
-    //     valueMarkdown,
-    //     valueHtml,
-    //   },
-    // });
+    console.log(
+      id,
+      timeValue,
+      typeValue,
+      titleValue,
+      secretValue,
+      valueMarkdown,
+      valueHtml)
+    axios({
+      method: "post",
+      url: "http://localhost:3001/editArticle",
+      data: {
+        id,
+        timeValue,
+        typeValue,
+        titleValue,
+        secretValue,
+        valueMarkdown,
+        valueHtml,
+      },
+    });
   };
   let contentChange = (e) => {
     setContent(e.target.value);
@@ -92,8 +109,8 @@ export default function Post() {
   let secretChange = (e) => {
     setSecret(e.target.value);
   };
-  let idChange = (e) => {
-    setId(e.target.value);
+  let idChange = (value) => {
+    setId(value);
   };
   return (
     <div>
@@ -112,6 +129,13 @@ export default function Post() {
         <Layout>
           <Header style={{ position: 'fixed', zIndex: 1, width: '100%', background: '#fff' }}>
             <Space direction="horizontal">
+
+              <Select defaultValue="选择原文标题,增加不需" style={{ width: 220 }} allowClear='true' onChange={idChange}>
+                {articleList.map(item => {
+                  return (<Option value={item.id}>{item.title}</Option>)
+                })}
+              </Select>
+
               <Input placeholder="输入标题" onChange={titleChange} />
               <DatePicker onChange={timeChange} />
               <Select defaultValue="文章类型" style={{ width: 120 }} onChange={typeChange}>
