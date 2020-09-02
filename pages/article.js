@@ -4,7 +4,6 @@ import ArticleHeader from "../components/ArticleHeader";
 import Footer from "../components/Footer";
 import Gitalk from "gitalk";
 import PostDir from "blog-directories";
-
 import React from "react";
 export default class article extends React.Component {
   static async getInitialProps(context) {
@@ -23,6 +22,12 @@ export default class article extends React.Component {
       distractionFreeMode: false, // Facebook-like distraction free mode
     });
     gitalk.render("comments");
+    const postDir = new PostDir({
+      postContainer: "article_content",
+      hierarchy: ["h2", "h3"],
+      directoriesRoot: "directories_box",
+    });
+    postDir.render();
   }
 
   render() {
@@ -65,6 +70,7 @@ export default class article extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.result.valueHtml }}
           />
         </div>
+        <div id="directories_box" className="directories_box"></div>
         <style jsx>{`
           time {
             color: #9e9e9e;
@@ -144,6 +150,14 @@ export default class article extends React.Component {
               box-sizing: content-box;
               margin-right: auto;
               margin-left: auto;
+            }
+            .directories_box{
+              position:fixed;
+              top:110px;
+              right:50px;
+              font-size:16px;
+              letter-spacing:2px;
+              line-height:2;
             }
           }
         `}</style>
