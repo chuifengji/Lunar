@@ -83,7 +83,7 @@ export default function Post() {
       valueHtml)
     axios({
       method: "post",
-      url: "http://localhost:3001/editArticle",
+      url: "https://www.ethanlv.cn/api/editArticle",
       data: {
         id,
         timeValue,

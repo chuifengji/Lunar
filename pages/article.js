@@ -81,6 +81,9 @@ export default class article extends React.Component {
             width: 80%;
             margin: auto;
           }
+          #article_content{
+            margin-top:20px;
+          }
           @media (min-width: 300px) {
             .article_source {
               max-width: 640px;
@@ -93,6 +96,7 @@ export default class article extends React.Component {
               margin-left: auto;
               font-size: 16px;
               margin-right: auto;
+            
             }
             .directories_box{
               display:none;
@@ -111,9 +115,7 @@ export default class article extends React.Component {
               font-size: 16px;
               margin-right: auto;
             }
-            .directories_box{
-              display:none;
-            }
+      
           }
           @media (min-width: 768px) {
             .article_source {
@@ -128,9 +130,7 @@ export default class article extends React.Component {
               font-size: 16px;
               margin-right: auto;
             }
-            .directories_box{
-              display:none;
-            }
+        
           }
           @media (min-width: 1024px) {
             .article_source {
@@ -144,9 +144,6 @@ export default class article extends React.Component {
               font-size: 16px;
               box-sizing: content-box;
               margin-right: auto;
-            }
-            .directories_box{
-              display:none;
             }
           }
           @media (min-width: 1280px) {
@@ -170,7 +167,9 @@ export default class article extends React.Component {
               font-size:16px;
               letter-spacing:2px;
               line-height:2;
+              display:block;
             }
+            
           }
         `}</style>
         <style jsx global>
@@ -280,9 +279,8 @@ export default class article extends React.Component {
            }
           `}
         </style>
-        <Footer></Footer>
         <div id="comments"></div>
-        <div id="ll"></div>
+        <Footer></Footer>
       </div>
     );
   }
