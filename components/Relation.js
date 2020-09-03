@@ -22,7 +22,7 @@ export default function Relation() {
               flex-direction: row;
               justify-content:center;
               align-items:center;
-              height:60px;
+              height:52px;
             }
             .item_icon{
                 margin:10px;

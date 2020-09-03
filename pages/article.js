@@ -94,6 +94,9 @@ export default class article extends React.Component {
               font-size: 16px;
               margin-right: auto;
             }
+            .directories_box{
+              display:none;
+            }
           }
           @media (min-width: 640px) {
             .article_source {
@@ -107,6 +110,9 @@ export default class article extends React.Component {
               margin-left: auto;
               font-size: 16px;
               margin-right: auto;
+            }
+            .directories_box{
+              display:none;
             }
           }
           @media (min-width: 768px) {
@@ -122,6 +128,9 @@ export default class article extends React.Component {
               font-size: 16px;
               margin-right: auto;
             }
+            .directories_box{
+              display:none;
+            }
           }
           @media (min-width: 1024px) {
             .article_source {
@@ -135,6 +144,9 @@ export default class article extends React.Component {
               font-size: 16px;
               box-sizing: content-box;
               margin-right: auto;
+            }
+            .directories_box{
+              display:none;
             }
           }
           @media (min-width: 1280px) {

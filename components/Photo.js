@@ -16,24 +16,15 @@ export default function Photo() {
             margin-right: auto;
             width: 30vw;
             height: 30vw;
-            margin-top: 60px;
+            margin-top: 40px;
             border-radius: 15vw;
+            border:3px solid rgb(11, 122, 122);
           
           }
           .avatar_img {
             width: 30vw;
             height: 30vw;
           }
-          .photo_maintainer {
-            display: flex;
-            justify-center: center;
-            flex-direction: column;
-            width: 100%;
-          }
-        }
-        @media (min-width: 640px) {
-        }
-        @media (min-width: 1024px) {
         }
         @media (min-width: 1280px) {
           .avatar_container {
@@ -42,7 +33,7 @@ export default function Photo() {
             margin-right: auto;
             width: 16vw;
             height: 16vw;
-            margin-top: 50px;
+            margin-top: 40px;
             border-radius: 9vw;
             border:4px solid rgb(11, 122, 122);
           }
@@ -50,17 +41,17 @@ export default function Photo() {
             width: 16vw;
             height: 16vw;
           }
-          .avatar_img:hover{
+        }
+        .avatar_img:hover{
           transform: rotate(2160deg);
           transition: transform 3s ease;
-          }
-          .photo_maintainer {
+        }
+        .photo_maintainer {
             display: flex;
             justify-center: center;
             flex-direction: column;
             width: 100%;
           }
-        }
       `}</style>
     </div>
   );

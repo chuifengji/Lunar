@@ -35,14 +35,14 @@ export default function TechList() {
             .font_text {
               font-weight: 600;
               color: #212121;
-              font-size: 18px;
+              font-size: 17px;
               height:35px;
               line-height:35px;
               text-overflow: ellipsis;
               white-space: nowrap;
               overflow: hidden;
               width: 100%;
-              letter-spacing:2px;            
+              letter-spacing:1px;            
             }
             .font_time {
               color: rgb(11, 122, 122);

@@ -42,7 +42,7 @@ export default function Nav() {
             font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
             flex-direction: row;
             text-align: center;
-            font-size: 18px;
+            font-size: 17px;
             justify-content: center;
           }
           .item_container {
@@ -68,7 +68,7 @@ export default function Nav() {
             text-align: center;
             display: flex;
             flex-direction: column;
-            padding: 12px;
+            padding: 0 20px;
             color: #757575;
           }
         }

@@ -83,7 +83,7 @@ export default function Home() {
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 10px;
-            color: #9e9e9e;
+            color:rgb(11, 122, 122);
             font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
               Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
               Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;

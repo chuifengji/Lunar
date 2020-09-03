@@ -3,6 +3,7 @@ import Nav from "../components/Nav";
 import Photo from "../components/Photo";
 import About from "../components/About";
 import Footer from "../components/Footer";
+import Relation from "../components/Relation"
 export default function Home() {
   return (
     <div>
@@ -36,6 +37,7 @@ export default function Home() {
       <main className="main_container">
         <div className="nav_and_photo_container">
           <Photo></Photo>
+          <Relation></Relation>
           <Nav></Nav>
         </div>
         <div className="about_container">
