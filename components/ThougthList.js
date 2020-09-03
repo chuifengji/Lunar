@@ -6,6 +6,7 @@ export default function TechList() {
   const [data, setData] = useState({ hits: [] });
   const getList = async () => {
     const result = await axios("https://www.ethanlv.cn/api/getList");
+    result.data.typeTwoList.sort(function (a, b) { if (a.time > b.time) { return -1 } else { return 1; } })
     setData({ hits: result.data.typeTwoList });
   };
   useEffect(() => {
