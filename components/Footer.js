@@ -19,7 +19,7 @@ export default function Footer() {
         }
         a {
           border-bottom-width: 2px;
-          border-color: #9e9e9e;
+          border-color: rgb(11, 122, 122);
           border-bottom-style: solid;
           color: inherit;
           text-decoration: none;

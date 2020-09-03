@@ -24,52 +24,65 @@ export default function TechList() {
           @media (min-width: 300px) {
             .list_item {
               display: flex;
-              flex-direction: row;
+              flex-direction: column;
               text-align: left;
-              margin-left: 10vw;
               cursor: pointer;
-              height: 26px;
-              line-height: 26px;
+              width: 90vw;
+              height: 70px;
+              margin-left:5vw;
+              font-family: "Iowan Old Style", Palatino, Georgia, "Times New Roman", Times, serif;
             }
             .font_text {
               font-weight: 600;
               color: #212121;
-              font-size: 16px;
+              font-size: 18px;
+              height:35px;
+              line-height:35px;
               text-overflow: ellipsis;
               white-space: nowrap;
               overflow: hidden;
-              width: 230px;
+              width: 100%;
+              letter-spacing:2px;            
             }
             .font_time {
-              color:rgb(11, 122, 122);
+              color: rgb(11, 122, 122);
               margin-right: 15px;
               font-size: 15px;
+              height:25px;
+              line-height:25px;
+              font-family: "Iowan Old Style", Palatino, Georgia, "Times New Roman", Times, serif;
             }
           }
           @media (min-width: 640px) {
             .list_item {
               display: flex;
-              flex-direction: row;
+              flex-direction: column;
               text-align: left;
-              margin-left: 25vw;
               cursor: pointer;
-              width: 80vw;
-              height: 37px;
-              line-height: 37px;
+              width: 75vw;
+              height: 70px;
+              margin-left:15vw;
+              font-family: "Iowan Old Style", Palatino, Georgia, "Times New Roman", Times, serif;
             }
             .font_text {
               font-weight: 600;
               color: #212121;
-              font-size: 17px;
+              font-size: 20px;
+              height:35px;
+              line-height:35px;
               text-overflow: ellipsis;
               white-space: nowrap;
               overflow: hidden;
-              width: 310px;
+              width: 100%;
+              letter-spacing:2px;            
             }
             .font_time {
               color: rgb(11, 122, 122);
               margin-right: 15px;
               font-size: 16px;
+              height:25px;
+              line-height:25px;
+              font-family: "Iowan Old Style", Palatino, Georgia, "Times New Roman", Times, serif;
             }
           }
           @media (min-width: 1024px) {

@@ -259,12 +259,12 @@ export default class article extends React.Component {
               border-left-color: rgb(11, 122, 122);;
               margin: 0;
               padding: .3rem;
-              background-color: rgba(150, 230, 230, 0.2);
+              background-color: rgba(141, 193, 193, 0.24);
               border-radius:8px;
             }
            strong{
             color: rgb(11, 122, 122);
-            background-color: rgba(131, 211, 211, 0.2);
+            background-color:rgba(141, 193, 193, 0.24);
            }
           `}
         </style>

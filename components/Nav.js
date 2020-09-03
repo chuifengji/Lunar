@@ -15,33 +15,52 @@ export default function Nav() {
         <text className="item_en_font">ABOUT ME</text>
       </div>
       <style jsx>{`
-        .main_container {
-          font-family: "Noto Serif SC", Lusitana, serif;
-          display: flex;
-          flex-direction: row;
-          text-align: center;
-          font-size: 1.3rem;
-          justify-content: center;
-        }
-        .item_container {
-          cursor: pointer;
-          text-align: center;
-          display: flex;
-          flex-direction: column;
-          padding: 25px;
-          color: #757575;
+      @media screen and (min-width: 300px) {
+          .main_container {
+            display: flex;
+            font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+            flex-direction: row;
+            text-align: center;
+            font-size: 16px;
+            justify-content: center;
+          }
+          .item_container {
+            cursor: pointer;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            padding: 9px;
+            color: #757575;
+          }
         }
         .item_container:hover {
           color: #212121;
         }
-        .item_en_font {
-        }
-        @media screen and (max-width: 1025px) {
+        @media screen and (min-width: 340px) {
           .main_container {
             display: flex;
+            font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
             flex-direction: row;
             text-align: center;
-            font-size: 1.1rem;
+            font-size: 18px;
+            justify-content: center;
+          }
+          .item_container {
+            cursor: pointer;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            padding: 12px;
+            color: #757575;
+          }
+        }
+        @media screen and (min-width: 1025px) {
+          .main_container {
+            display: flex;
+            font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+            flex-direction: row;
+            text-align: center;
+            font-size: 20px;
             justify-content: center;
           }
           .item_container {
