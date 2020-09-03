@@ -5,8 +5,8 @@ export default function Footer() {
         <a href="http://www.beian.miit.gov.cn" target="_blank">
           皖ICP备19006064号-3
         </a>
-        Powered By <a href="https://github.com/chuifengji/Lunar" target="_blank">
-          Lunar
+        <a href="https://github.com/chuifengji/Lunar" target="_blank">
+          Powered By Lunar
         </a>
       </div>
       <style jsx>{`

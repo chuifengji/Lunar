@@ -3,9 +3,12 @@ import Nav from "../components/Nav";
 import Photo from "../components/Photo";
 import ProgramList from "../components/ProgramList";
 import Footer from "../components/Footer";
+import Relation from "../components/Relation"
 export default function Home() {
   return (
-    <div>
+    <div style={{
+      overflowX: 'hidden'
+    }}>
       <Head>
         <title>EthanLv's blog</title>
         <link rel="icon" href="/favicon.ico" />
@@ -36,6 +39,7 @@ export default function Home() {
       <main className="main_container">
         <div className="nav_and_photo_container">
           <Photo></Photo>
+          <Relation></Relation>
           <Nav></Nav>
         </div>
 
@@ -103,6 +107,6 @@ export default function Home() {
           }
         }
       `}</style>
-    </div>
+    </div >
   );
 }
