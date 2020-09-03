@@ -5,8 +5,8 @@ export default function Footer() {
         <a href="http://www.beian.miit.gov.cn" target="_blank">
           皖ICP备19006064号-3
         </a>
-        <a href="https://github.com/chuifengji" target="_blank">
-          Github
+        Powered By <a href="https://github.com/chuifengji/Lunar" target="_blank">
+          Lunar
         </a>
       </div>
       <style jsx>{`
@@ -16,6 +16,8 @@ export default function Footer() {
           margin: auto;
           margin-bottom: 20px;
           margin-top: 20px;
+          font-size:16px;
+          font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
         }
         a {
           border-bottom-width: 2px;
