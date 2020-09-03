@@ -69,7 +69,7 @@ export default function Home() {
           font-weight: 600;
           margin-bottom: 15px;
           text-align: center;
-          color: #9e9e9e;
+          color: rgb(11, 122, 122);
           font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
             Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
             Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -88,6 +88,7 @@ export default function Home() {
             display: flex;
             flex-direction: column;
             width: 100vw;
+            overflow-x: hidden;
           }
           .nav_and_photo_container {
             display: flex;

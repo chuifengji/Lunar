@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div>
+    <div className="about_container">
       <p>
         &nbsp;&nbsp;Ethan
         Lv(吹风机)，00年生，武汉某高校(中南民族大学)本科在读，一个不喜欢写CSS的前端底层民工。上大学才会用Ctrl
@@ -32,4 +32,9 @@ export default function About() {
       </p>
     </div>
   );
+  <style jsx>{`
+.about_container{
+  font-family: "Iowan Old Style", Palatino, Georgia, "Times New Roman", Times, serif;
+}
+`}</style>
 }

@@ -256,16 +256,15 @@ export default class article extends React.Component {
             blockquote {
               border-left-width: 4px;
               border-left-style: solid;
-              border-left-color: #553c9a;
-              color: #553c9a;
+              border-left-color: rgb(11, 122, 122);;
               margin: 0;
               padding: .3rem;
-              background-color: #edf2f7;
+              background-color: rgba(150, 230, 230, 0.2);
               border-radius:8px;
             }
            strong{
-            color: #553c9a;
-            background-color: #edf2f7;
+            color: rgb(11, 122, 122);
+            background-color: rgba(131, 211, 211, 0.2);
            }
           `}
         </style>

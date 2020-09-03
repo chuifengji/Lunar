@@ -59,7 +59,7 @@ export default function ArticleHeader() {
           display: flex;
           flex-direction: row;
           text-align: center;
-          color: #553c9a;
+          color: rgb(11, 122, 122);
           font-size:16px;
           backdrop-filter: blur(5px);
           border-bottom: 1px solid #e2e8f0;
@@ -78,7 +78,7 @@ export default function ArticleHeader() {
           font-weight: 700;
         }
         .title_blog:hover {
-          color: #9f7aea;
+          color: rgb(11, 175, 175);
         }
         .header_item {
           width: 80px;
@@ -87,7 +87,7 @@ export default function ArticleHeader() {
           cursor: pointer;
         }
         .header_item:hover {
-          color: #9f7aea;
+          color:rgb(11, 175, 175);
         }
       `}</style>
     </div>

@@ -28,7 +28,7 @@ export default function Nav() {
           text-align: center;
           display: flex;
           flex-direction: column;
-          padding: 15px;
+          padding: 25px;
           color: #757575;
         }
         .item_container:hover {

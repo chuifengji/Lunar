@@ -4,15 +4,10 @@ export default function Photo() {
       <div className="avatar_container">
         <img
           className="avatar_img"
-          src="http://img.nt-geek.club/avatar-blog-ldl.jpg"
+          src="https://img.ethanlv.cn/avatar-blog-ldl.jpg"
         />
       </div>
-      <div className="signature_container">
-        <img
-          className="signature_img"
-          src="http://img.nt-geek.club/signature-ldl.png"
-        />
-      </div>
+
       <style jsx>{`
         @media (min-width: 300px) {
           .avatar_container {
@@ -23,22 +18,11 @@ export default function Photo() {
             height: 30vw;
             margin-top: 60px;
             border-radius: 15vw;
+          
           }
           .avatar_img {
             width: 30vw;
             height: 30vw;
-          }
-          .signature_container {
-            margin-left: auto;
-            margin-right: auto;
-            width: 18vw;
-            margin-top: 8px;
-            margin-bottom: 0;
-          }
-          .signature_img {
-            width: 18vw;
-            margin-top: 8px;
-            margin-bottom: 2px;
           }
           .photo_maintainer {
             display: flex;
@@ -60,22 +44,15 @@ export default function Photo() {
             height: 16vw;
             margin-top: 50px;
             border-radius: 9vw;
+            border:4px solid rgb(11, 122, 122);
           }
           .avatar_img {
             width: 16vw;
             height: 16vw;
           }
-          .signature_container {
-            margin-left: auto;
-            margin-right: auto;
-            width: 10vw;
-            margin-top: 8px;
-            margin-bottom: 0;
-          }
-          .signature_img {
-            width: 10vw;
-            margin-top: 8px;
-            margin-bottom: 2px;
+          .avatar_img:hover{
+          transform: rotate(2160deg);
+          transition: transform 3s ease;
           }
           .photo_maintainer {
             display: flex;
